@@ -54,10 +54,81 @@ func sum_and_avrage(){
 
     
 }
-discount()
-leap_year() ? print("Is a leap year") : print("Not a leap year")
-sum_and_avrage()
+//discount()
+//leap_year() ? print("Is a leap year") : print("Not a leap year")
+//sum_and_avrage()
 
+
+
+
+
+class Polygon{
+    
+    var no_of_sides: Int
+    var interior_angle: Int
+    var side_length:Int
+    init() {
+        no_of_sides = 0
+        interior_angle = 0
+        side_length = 0
+    }
+    
+    
+    func printNumOfSides() {
+        print(no_of_sides)
+    }
+    
+    
+    func printInteriorAngle(){
+        print(interior_angle)
+    }
+    
+    
+    func interiorAngle(){
+        interior_angle=( no_of_sides-2)*180
+    }
+}
+
+class Triangle: Polygon {
+    var area: Double
+    var parameter:Double
+    
+    override init() {
+        
+        area=0
+        parameter=0
+        super.init()
+        no_of_sides=3
+    }
+    
+    func getSideLength(){
+        print(side_length)
+    }
+    
+    
+    func setSideLength(length: Int){
+        side_length = length
+    }
+    
+    func printArea(){
+        print(area)
+    }
+    
+    func calculateArea() {
+        
+        let sq_root = sqrt(3)
+        print("Area is ")
+        print(0.5*sq_root*Double(side_length))
+    }
+    
+}
+
+
+var tri = Triangle()
+tri.setSideLength(length:20)
+tri.interiorAngle()
+tri.calculateArea()
+tri.printNumOfSides()
 
 
 
