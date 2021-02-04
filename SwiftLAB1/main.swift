@@ -114,11 +114,10 @@ class Triangle: Polygon {
         print(area)
     }
     
-    func calculateArea() {
-        
+    func calculateArea(){
         let sq_root = sqrt(3)
         print("Area is ")
-        print(0.5*sq_root*Double(side_length))
+        print((sq_root/4)*Double(side_length^2))
     }
     
 }
